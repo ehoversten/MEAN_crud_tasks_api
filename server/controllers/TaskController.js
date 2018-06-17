@@ -10,7 +10,6 @@ class TaskController {
 
 // ------- display_all METHOD ------------------ //
 
-
   display_all(req, res) {
     Task.find( {}, (err, tasks)=> {
       if(tasks) {

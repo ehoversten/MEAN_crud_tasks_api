@@ -8,13 +8,20 @@ const path       = require('path');
 const PORT = 8000;
 
 const app = express();
+// serves up our Angular App
+// app.use(express.static(__dirname + '/client/dist/'));
+// app.use(express.static(path.join(__dirname, '/client/public/dist')));
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(flash());
 
-//
-// app.use(express.static(__dirname + './client/static'));
+
+// app.use(express.static( __dirname + './public/dist/public' ));
+
+app.use(express.static(path.join(__dirname, '/public/dist/public')));
+
+
 
 // app.use(express.static(__dirname + './static'));
 // app.use(session({
