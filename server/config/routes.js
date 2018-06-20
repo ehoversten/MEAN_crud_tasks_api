@@ -15,6 +15,6 @@ module.exports = function(app) {
   // if we dont hit ay of our backend routes, serve our Angular App
   app.all("*", (req, res, next)=> {
     res.sendFile(path.resolve("./public/dist/public/index.html"));
-    
+
   });
 }

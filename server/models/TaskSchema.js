@@ -1,7 +1,7 @@
 // Require our DATABASE
 const mongoose = require('mongoose');
 
-// Model
+// Define our Model (Blueprint)
 const TaskSchema = new mongoose.Schema({
   title: { type: String, required: true, minlength:2 },
   description: { type: String, default: "", maxlength:255},
