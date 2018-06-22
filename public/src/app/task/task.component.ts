@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TaskService } from '../task.service';
+
 
 @Component({
   selector: 'app-task',
@@ -6,11 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
+  snacks: string[];
+  loggedIn: boolean;
+  @Input() task;
 
-  
-  constructor() { }
+  constructor(private ts:TaskService) {
+    this.task = {
+      title: "",
+      description: ""
+    };
+  }
 
   ngOnInit() {
+    this.snacks = ["vanilla latte with skim milk", "cookie"];
+    this.loggedIn = true;
   }
+
 
 }

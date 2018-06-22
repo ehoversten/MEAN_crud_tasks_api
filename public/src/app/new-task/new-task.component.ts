@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import our Service from the TaskService File
 import { TaskService } from '../task.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class NewTaskComponent implements OnInit {
   private task;
 
   constructor(private taskService:TaskService) {
+  // define our task model on the front end
     this.task = {
       title:"",
       description:""
@@ -20,6 +22,7 @@ export class NewTaskComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
   createTask() {
     console.log("Submitted new Task!");
@@ -34,6 +37,6 @@ export class NewTaskComponent implements OnInit {
       description:""
     }
 
-  }
+  }  // end of createTask() method
 
 }

@@ -1,4 +1,32 @@
+<!-- <div class="aTask">
+  <h3>{{ aTask.title }}</h3>
+</div> -->
+<button (click)="getAll()">Get All</button>
+
+<div class="oneTask">
+  <h2>Selected Task Details:</h2>
+<!-- IF task is selected, show its contents -->
+  <h4 *ngIf="task">Task: {{ task.title }}</h4>
+  <p *ngIf="task">Task ID: {{ task._id }}</p>
+  <p *ngIf="task">Description: {{ task.description }}</p>
+  <!-- <h4 >Task: {{ task.title }}</h4>
+  <p>Task ID: {{ task._id }}</p>
+  <p >Description: {{ task.description }}</p> -->
+  <hr>
+  <br>
+  <hr>
+  <br>
+  <br>
+  <br>
+
+</div>
+
 <div class="all_tasks" *ngFor="let task of all_tasks">
   <h1>Title: {{ task.title }}</h1>
-  <h4>Description: {{ task.description }}</h4>
+  <!-- <p>ID: {{ task._id}}</p>
+  <h4>Description: {{ task.description }}</h4> -->
+
+  <button (click)="getTask(task)">Show Details</button>
+  <br>
+  <hr>
 </div>

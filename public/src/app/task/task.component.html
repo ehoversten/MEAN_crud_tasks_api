@@ -1,3 +1,8 @@
 <p>
   task works!
 </p>
+
+
+<p *ngIf="loggedIn">You are logged in!</p>
+<p *ngFor="let snack of snacks">{{snack}}</p>
+<p *ngIf="snacks.length < 3">You need more snacks.</p>
